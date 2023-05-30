@@ -21,7 +21,6 @@ const armadoCarrito = (carrito, mainCarrito) => {
             mainCarrito.appendChild(fila);
       }
 }
-
 const sacarCarrito = (e) => {
       let nombre = e.target.id;
       let carritoStorage = JSON.parse(localStorage.getItem("carrito"));

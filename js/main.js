@@ -28,8 +28,6 @@ const agregarCarrito = (e) => {
 }
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 let mainCatalogo = document.getElementById("mainCatalogo");
 
 let boton = mainCatalogo.querySelectorAll("button");
@@ -37,10 +35,3 @@ let boton = mainCatalogo.querySelectorAll("button");
 for (let i of boton) {
       i.addEventListener("click", agregarCarrito);
 }
-
-
-
-
-
-
-
