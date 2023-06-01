@@ -24,15 +24,15 @@ const armadoCarrito = () => { //funcion que arma la estrucutra html del carrito 
             lista.appendChild(fila); //se agrega el section nuevo al main de carrito.html
       }
 }
-const precioFinal = () => {
-      let total = carrito.map((el) => el.cantidad * el.precio).reduce((acumulador, elemento) => acumulador + elemento, 0)
+const precioFinal = () => { //funcion que calcula y muestra el precio final de todos los productos en el carrito
+      let total = carrito.map((el) => el.cantidad * el.precio).reduce((acumulador, elemento) => acumulador + elemento, 0) //hago un map() a todos los precios de los productos en el localStorage multiplicado por sus respectivas cantidades, y luego se suman
       precioTotal.innerHTML = `
       <ul class="list-group" >
             <li class="list-group-item" id="precioTotal">
                   el precio total es de $${total}
             </li>
       </ul>
-      `
+      ` //se muestra en pantalla el precio final
 }
 
 const sacarCarrito = (e) => { //funcion que permite sacar articulos del carrito
