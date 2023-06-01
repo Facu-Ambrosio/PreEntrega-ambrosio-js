@@ -9,16 +9,16 @@ const productos = [ //array con todos los productos disponibles
       { nombre: "The Old Men", precio: 5000, cantidad: 1 },
 ]
 const agregarCarrito = (e) => { //funcion que agrega al carrito los productos
-      let  dibujo = e.target.id; // id del dibujo
+      let dibujo = e.target.id; // id del dibujo
       let carritoStorage = JSON.parse(localStorage.getItem("carrito")) || []; // Si no hay elementos en el carrito del localStorage, se asigna un array vacío
 
-      let  dibujoExistente = carritoStorage.find((el) => el.nombre === dibujo); //variable que  indica si el dibujo al cual se agrega al carrito existe o no
+      let dibujoExistente = carritoStorage.find((el) => el.nombre === dibujo); //variable que  indica si el dibujo al cual se agrega al carrito existe o no
 
       if (dibujoExistente) { //en caso de que el dibujo que se quiere agregar al carrito ya estuviera en este
             dibujoExistente.cantidad += 1; //se le suma 1 a la cantidad en el carrito
             alert(`Usted agregó ${dibujoExistente.cantidad} dibujo/s de "${dibujo}" a su carrito`); //se muestra un alert donde incique al usuario que ha agregado un articulo al carrito
       } else { //si el articulo no existe en el carrito
-            let  nuevoDibujo = productos.find((el) => el.nombre === dibujo); //se declara un objeto nuevo que sea el  del producto elegido
+            let nuevoDibujo = productos.find((el) => el.nombre === dibujo); //se declara un objeto nuevo que sea el  del producto elegido
             carritoStorage.push(nuevoDibujo); //se agrega el producto al carrito que va directo al localStorage
             alert(`Usted agregó ${nuevoDibujo.cantidad} dibujo/s de "${dibujo}" a su carrito`); //alert que avisa que el usuario añadio al carrito en producto
       }

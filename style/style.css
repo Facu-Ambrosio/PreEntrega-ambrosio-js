@@ -75,6 +75,23 @@ body {
 }
 
 .sectionCarrito {
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.mainCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaCarrito {
+  margin-top: 33px;
+}
+
+.listItemsCarrito {
+  border-color: black;
+  background-color: #DBC8AC;
 }/*# sourceMappingURL=style.css.map */
